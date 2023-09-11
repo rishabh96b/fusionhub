@@ -22,7 +22,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		Message:         message,
 	}
 
-	tmpl, err := template.ParseFiles("template.html")
+	tmpl, err := template.ParseFiles("./templates/template.html")
 	if err != nil {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		log.Println("Error parsing template:", err)

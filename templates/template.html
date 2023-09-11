@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FusionHub: Blue-Green Deployment</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: {{ if eq .BackgroundColor "blue" }}#2196F3{{ else if eq .BackgroundColor "green" }}#4CAF50{{ else }}#000000{{ end }}; /* Conditional background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0; /* Remove default margin */
+        }
+        h1 {
+            color: white;
+            font-size: 400%; /* 3 times larger */
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+    <h1>{{ .Message }}</h1>
+</body>
+</html>
