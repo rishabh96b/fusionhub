@@ -15,8 +15,19 @@
         h1 {
             color: white;
             font-size: 400%; /* 3 times larger */
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 1s ease-in-out forwards; /* Animation properties */
         }
-
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px); /* Optional: Slide up slightly */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
